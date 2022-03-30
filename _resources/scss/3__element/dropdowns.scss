@@ -1,0 +1,28 @@
+.m_dropdown {
+	cursor: pointer;
+	
+	&.-opened {
+		.m_dropdown_container {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+	}
+}
+
+.m_dropdown_container {
+	max-height: 0px;
+	overflow: hidden;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	
+	transition: all .4s cubic-bezier(0, 0.55, 0.45, 1);
+	
+	&.-opened {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+.m_dropdown_inner {
+	
+}

@@ -1,0 +1,56 @@
+childBlocks: ''
+field: 36c0a2a3-459b-4683-9aa6-b0a9d4f70494 # Page Content
+fieldLayouts:
+  865d1ede-c519-4acb-8ad3-f5c1d89276fc:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 54c7446b-ba5e-4499-85f6-9e661a1087f1 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: aab8002b-446b-41d5-a1c0-e5f01e6eda00 # Plain Headline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2b60e1de-adbb-4bdc-ba9a-1c960b2bb320 # Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 69849cd6-effc-4de9-b732-74455851ac89 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 2
+handle: m_card_links
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+name: 'Card - Links'
+sortOrder: 14
+topLevel: false

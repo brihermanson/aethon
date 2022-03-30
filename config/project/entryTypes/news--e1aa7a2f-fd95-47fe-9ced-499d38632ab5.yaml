@@ -1,0 +1,87 @@
+fieldLayouts:
+  388be08e-de52-4502-a8a0-8c4703c9d926:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6f7eb907-3b35-46f1-bf69-18935a3f7704 # Thumbnail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 80013380-87b7-4cb1-9fe2-703aa37d9293 # News Category
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 05f4701b-0ed4-4d09-a2cc-2420cd3bf02e # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Preview
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 36c0a2a3-459b-4683-9aa6-b0a9d4f70494 # Page Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a380ed90-13bb-4604-8b69-2d0b6d37f7e5 # Related Articles
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 2
+handle: news
+hasTitleField: true
+name: News
+section: 3b66037f-a617-46e4-8f74-ba39d97df831 # News Articles
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

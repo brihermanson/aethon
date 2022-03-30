@@ -1,0 +1,30 @@
+{# -------------------------------------------------
+   Module: One Column
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% import '_macros/icon' as icons %}
+
+{% set components 	=  	block.children.all() %}
+{% set background 	= 	block.backgroundColor %}
+{% set id 			= 	block.module_id %}
+{% set narrow		= 	block.narrow %}
+{% set padding		= 	block.padding %}
+
+{#
+   -------------------------------------------------
+#}
+
+<section class="{{ background }}" id="{{ id|kebab }}">
+	
+	<div class="l-container  {% if narrow %}-narrow{% else %}-medium{% endif %} | {{ padding }}">
+		<div class="l-row | grid grid-col-1 | items-center">
+			{% for component in components %}
+				{% set component_handle = component.type %}
+			    {% include '_component/' ~ component_handle with { parent: 'neo', type: 'full', index: loop.index, padding: padding } %}
+			{% endfor %}
+		</div>
+	</div>
+	
+</section>

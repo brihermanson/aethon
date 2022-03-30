@@ -1,0 +1,94 @@
+{# -------------------------------------------------
+   Layout: Content Builder
+
+   The Content Builder layout captures all blocks in an entry.
+   The SEO block is excluded.
+   Entry blocks are included directly with parent = entry.
+   Neo blocks include the section builder.
+------------------------------------------------- #}
+
+{% extends '_layout/base' %}
+
+{% set headline    = entry.title %}
+{% set desc        = entry.description %}
+{% set thumb       = entry.thumbnail %}
+{% set url         = entry.url %}
+{% set related	   = entry.relatedArticles.all() %}
+{% set limit	   = 3 - related|length %}
+{% set random	   = craft.entries.section('news').limit(limit) %}
+
+{% block content %}
+
+   {# ---  Capture Entry Blocks  --- #}
+   {% for block in entry.getFieldLayout().getFields() %}
+
+	  {# ---  Filter Blocks  --- #}
+	  {% switch block.className() %}
+		 {# ---  SEO Block  --- #}
+		 {% case 'nystudio107\\seomatic\\fields\\SeoSettings' %}
+
+		 {# ---  NEO Blocks  --- #}
+		 {% case 'benf\\neo\\Field' %}
+			{% set neo       = entry[block.handle] %}
+
+			{# ---  Include Sections  --- #}
+			{% for block in neo.level(1).all() %}
+
+			   {% set block_handle = block.type                        %}
+
+			   {% include '_modules/' ~ block_handle with { parent: 'neo' } %}
+			{% endfor %}
+
+	 {% endswitch %}
+
+   {% endfor %}
+   
+   <section>
+
+	 <div class="l-container | pb-24">
+		<div class="l-row | flex | items-top">
+			<div class="l-item w-full mb-10">
+				<h2 class="font-proxima text-6 uppercase text-red-400 font-bold text-center">Related News</h2>
+			</div>
+		   {% for card in related %}
+			  
+			  {% set headline    = card.title %}
+			  {% set desc        = card.description %}
+			  {% set thumb       = card.thumbnail.one() %}
+			  {% set url         = card.url %}
+			  
+			  <div class="l-item w-full sm:w-1/2 lg:w-1/3 | mb-12 lg:mb-0">
+				<div class="pb-1/2 relative text-white">
+				  <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb.url }}" />
+				</div>
+				<div class="bg-gray-400 px-8 py-8">
+				  <h4 class="text-5 font-proxima font-bold text-red-500">{{ headline }}</h4>
+				  <p class="mb-4">{{ desc }}</p>
+				  <a class="e-button | my-2" href="{{ url }}">Read More</a>
+				</div>
+			  </div>
+		   {% endfor %}
+		   {% for card in random %}
+			 
+			 {% set headline    = card.title %}
+			 {% set desc        = card.description %}
+			 {% set thumb       = card.thumbnail.one() %}
+			 {% set url         = card.url %}
+			 
+			 <div class="l-item w-full sm:w-1/2 lg:w-1/3 | mb-12 lg:mb-0">
+			   <div class="pb-1/2 relative text-white">
+				 <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb.url }}" />
+			   </div>
+			   <div class="bg-gray-400 px-8 py-8">
+				 <h4 class="text-5 font-proxima font-bold text-red-500">{{ headline }}</h4>
+				 <p class="mb-4">{{ desc }}</p>
+				 <a class="e-button | my-2" href="{{ url }}">Read More</a>
+			   </div>
+			 </div>
+		  {% endfor %}
+		</div>
+	 </div>
+	 
+  </section>
+   
+{% endblock %}

@@ -1,0 +1,83 @@
+{# -------------------------------------------------
+   Layout: Content Builder
+
+   The Content Builder layout captures all blocks in an entry.
+   The SEO block is excluded.
+   Entry blocks are included directly with parent = entry.
+   Neo blocks include the section builder.
+------------------------------------------------- #}
+
+{% extends '_layout/base' %}
+
+{% block content %}
+	
+	{% set banner = {
+		header: entry.c_header,
+		image: entry.c_image,
+		id: 'banner',
+		parent: 'careers'
+	} %}
+	{% include '_modules/m_banner_hero' with banner %}
+	
+	<section class="m-sub_nav | flex divide-x divide-gray-400 | border-t border-gray-400">
+		<a href="#culture" class="flex-auto text-center | py-5 px-6 | w-full md:flex-auto text-center | py-5 px-6 | uppercase font-bold bg-white text-red-400 hover:bg-red-400 hover:text-white">Culture</a>
+		<a href="#benefits" class="flex-auto text-center | py-5 px-6 | w-full md:flex-auto text-center | py-5 px-6 | uppercase font-bold bg-white text-red-400 hover:bg-red-400 hover:text-white">Benefits</a>
+		<a href="#job-openings" class="flex-auto text-center | py-5 px-6 | w-full md:flex-auto text-center | py-5 px-6 | uppercase font-bold bg-white text-red-400 hover:bg-red-400 hover:text-white">Job Openings</a>
+	</section>
+	
+   {# ---  Capture Entry Blocks  --- #}
+   {% for block in entry.getFieldLayout().getFields() %}
+
+	  {# ---  Filter Blocks  --- #}
+	  {% switch block.className() %}
+		 {# ---  SEO Block  --- #}
+		 {% case 'nystudio107\\seomatic\\fields\\SeoSettings' %}
+
+		 {# ---  NEO Blocks  --- #}
+		 {% case 'benf\\neo\\Field' %}
+			{% set neo       = entry[block.handle] %}
+
+			{# ---  Include Sections  --- #}
+			{% for block in neo.level(1).all() %}
+
+			   {% set block_handle = block.type                        %}
+
+			   {% include '_modules/' ~ block_handle with { parent: 'neo' } %}
+			{% endfor %}
+
+	 {% endswitch %}
+
+   {% endfor %}
+   
+   <section class="bg-gray-400" id="job-openings">
+		
+		<div class="l-container">
+			<div class="l-row | flex | items-center">
+				<div class="l-item pt-20 pb-24 w-full | text-white">
+					<div class="text-center | pb-10">
+						<h2 class="e_header-one text-red-400">Current Openings</h2>
+					</div>
+					<div class="p-12 md:p-24 bg-red-400">
+						<script src='https://www.workable.com/assets/embed.js' type='text/javascript'></script>
+						
+						<script type='text/javascript' charset='utf-8'>
+						
+						whr(document).ready(function(){
+						
+						whr_embed(254836, {detail: 'titles', base: 'jobs', zoom: 'country', grouping: 'none'});
+						
+						});
+						
+						</script>
+						<div id="whr_embed_hook"></div>
+					</div>
+					<div class="md:w-1/2 md:mx-24 pt-12">
+						<h3 class="e_header-three text-red-400 font-minion font-bold text-6">Can’t find the right role? Email your resume to <a class="underline font-red-400 font-minion font-bold" href="mailto:aethon-energy@jobs.workablemail.com">aethon-energy@jobs.workablemail.com</a> to be considered for new positions in the future.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+   
+{% endblock %}

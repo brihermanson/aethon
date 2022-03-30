@@ -1,0 +1,33 @@
+{# -------------------------------------------------
+   Module: Hero Banner
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% import '_macros/icon' as icons %}
+
+{% set image 		=  	block.c_image.one() %}
+{% set headline 	= 	block.c_header %}
+{% set tabs		 	=  	block.children.all() %}
+
+{#
+   -------------------------------------------------
+#}
+
+<section class="relative" style="background-image: url({{ image.url }})">
+	
+	<div class="l-container | relative z-20">
+		<div class="l-row | flex | items-center">
+			<div class="l-item pt-20 pb-24 w-full | text-white">
+				<div class="text-center | pb-10">
+					{{ headline }}
+				</div>
+				{% for tab in tabs %}
+					{% set tab_handle = tab.type %}
+					{% include '_component/' ~ tab_handle with { parent: 'neo' } %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	
+</section>

@@ -1,0 +1,61 @@
+childBlocks:
+  - c_simple_block
+  - c_header
+  - c_paragraph
+  - c_button
+  - c_image
+field: 36c0a2a3-459b-4683-9aa6-b0a9d4f70494 # Page Content
+fieldLayouts:
+  7bb3794d-ab88-4d67-b12e-8dc636ccfe5f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 54c7446b-ba5e-4499-85f6-9e661a1087f1 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 69849cd6-effc-4de9-b732-74455851ac89 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5d03a6e5-4e4b-425c-afef-b5516728fa11 # Narrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: a1517bcc-6e03-4eec-8a80-a1bb1d487231 # Vertical Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Settings
+        sortOrder: 2
+handle: m_overlapped_graphic
+maxBlocks: 0
+maxChildBlocks: 2
+maxSiblingBlocks: 0
+name: 'Overlapped Graphic'
+sortOrder: 6
+topLevel: true

@@ -1,0 +1,9 @@
+.m-site_menu {
+	transform: translateY(-100%);
+	
+	transition: all .4s cubic-bezier(0, 0.55, 0.45, 1);
+	
+	&.-opened {
+		transform: translateY(0%);
+	}
+}

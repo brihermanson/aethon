@@ -1,0 +1,142 @@
+{# -------------------------------------------------
+   Macro: Image
+   Variants: Standard / Background
+------------------------------------------------- #}
+
+
+{% macro image(type, image, alt, max_width, classes) %}
+   {% switch type %}
+
+      {% case "background" %}
+         <div class="e-image e-image--background">
+            <img
+               alt="{% if alt %}{{ alt }}{% else %}{% endif %}"
+               class="lazy lazyload{% if classes %} | {{classes}}{% endif %}"
+
+               src="/dist/images/lazyload-dark.gif"
+
+               {% if max_width == 248 %}
+                  data-src="{{ image.url({ width: 248 }) }}"
+               {% elseif max_width == 320 %}
+                  data-srcset="
+                     {{ image.url({ width: 248 }) }} 248w,
+                     {{ image.url({ width: 320 }) }} 320w
+                  "
+               {% elseif max_width == 480 %}
+                  data-srcset="
+                     {{ image.url({ width: 248 }) }} 248w,
+                     {{ image.url({ width: 320 }) }} 320w,
+                     {{ image.url({ width: 480 }) }} 480w
+                  "
+               {% elseif max_width == 640 %}
+                  data-srcset="
+                     {{ image.url({ width: 248 }) }} 248w,
+                     {{ image.url({ width: 320 }) }} 320w,
+                     {{ image.url({ width: 480 }) }} 480w,
+                     {{ image.url({ width: 640 }) }} 640w
+                  "
+               {% elseif max_width == 912 %}
+                  data-srcset="
+                     {{ image.url({ width: 248 }) }} 248w,
+                     {{ image.url({ width: 320 }) }} 320w,
+                     {{ image.url({ width: 480 }) }} 480w,
+                     {{ image.url({ width: 640 }) }} 640w,
+                     {{ image.url({ width: 912 }) }} 912w
+                  "
+               {% elseif max_width == 1024 %}
+                  data-srcset="
+                     {{ image.url({ width: 320 }) }} 320w,
+                     {{ image.url({ width: 480 }) }} 480w,
+                     {{ image.url({ width: 640 }) }} 640w,
+                     {{ image.url({ width: 912 }) }} 912w,
+                     {{ image.url({ width: 1024 }) }} 1024w
+                  "
+               {% elseif max_width == 1280 %}
+                  data-srcset="
+                     {{ image.url({ width: 480 }) }} 480w,
+                     {{ image.url({ width: 640 }) }} 640w,
+                     {{ image.url({ width: 912 }) }} 912w,
+                     {{ image.url({ width: 1024 }) }} 1024w,
+                     {{ image.url({ width: 1280 }) }} 1280w
+                  "
+               {% elseif max_width == 1600 %}
+                  data-srcset="
+                     {{ image.url({ width: 640 }) }} 640w,
+                     {{ image.url({ width: 912 }) }} 912w,
+                     {{ image.url({ width: 1024 }) }} 1024w,
+                     {{ image.url({ width: 1280 }) }} 1280w,
+                     {{ image.url({ width: 1600 }) }} 1600w
+                  "
+               {% elseif max_width == 'full' %}
+                  data-src="{{ image.url}}"
+               {% endif %}
+            >
+         </div>
+
+
+      {% default %}
+         <div class="e-image{% if classes %} {{classes}}{% endif %}">
+            <img
+               alt="{% if alt %}{{ alt }}{% else %}{% endif %}"
+               class="lazy lazyload"
+               
+               src="/dist/images/lazyload-dark.gif"
+               
+               {% if max_width == 248 %}
+                  data-src="{{ image.url({ width: 248 }) }}"
+               {% elseif max_width == 320 %}
+                  data-srcset="
+                     {{ image.url({ width: 248 }) }} 248w,
+                     {{ image.url({ width: 320 }) }} 320w
+                  "
+               {% elseif max_width == 480 %}
+                  data-srcset="
+                     {{ image.url({ width: 248 }) }} 248w,
+                     {{ image.url({ width: 320 }) }} 320w,
+                     {{ image.url({ width: 480 }) }} 480w
+                  "
+               {% elseif max_width == 640 %}
+                  data-srcset="
+                     {{ image.url({ width: 248 }) }} 248w,
+                     {{ image.url({ width: 320 }) }} 320w,
+                     {{ image.url({ width: 480 }) }} 480w,
+                     {{ image.url({ width: 640 }) }} 640w
+                  "
+               {% elseif max_width == 912 %}
+                  data-srcset="
+                     {{ image.url({ width: 248 }) }} 248w,
+                     {{ image.url({ width: 320 }) }} 320w,
+                     {{ image.url({ width: 480 }) }} 480w,
+                     {{ image.url({ width: 640 }) }} 640w,
+                     {{ image.url({ width: 912 }) }} 912w
+                  "
+               {% elseif max_width == 1024 %}
+                  data-srcset="
+                     {{ image.url({ width: 320 }) }} 320w,
+                     {{ image.url({ width: 480 }) }} 480w,
+                     {{ image.url({ width: 640 }) }} 640w,
+                     {{ image.url({ width: 912 }) }} 912w,
+                     {{ image.url({ width: 1024 }) }} 1024w
+                  "
+               {% elseif max_width == 1280 %}
+                  data-srcset="
+                     {{ image.url({ width: 480 }) }} 480w,
+                     {{ image.url({ width: 640 }) }} 640w,
+                     {{ image.url({ width: 912 }) }} 912w,
+                     {{ image.url({ width: 1024 }) }} 1024w,
+                     {{ image.url({ width: 1280 }) }} 1280w
+                  "
+               {% elseif max_width == 1600 %}
+                  data-srcset="
+                     {{ image.url({ width: 640 }) }} 640w,
+                     {{ image.url({ width: 912 }) }} 912w,
+                     {{ image.url({ width: 1024 }) }} 1024w,
+                     {{ image.url({ width: 1280 }) }} 1280w,
+                     {{ image.url({ width: 1600 }) }} 1600w
+                  "
+               {% endif %}
+            >
+         </div>
+
+   {% endswitch %}
+{% endmacro %}

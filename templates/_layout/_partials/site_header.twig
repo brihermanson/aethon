@@ -1,0 +1,84 @@
+{# -------------------------------------------------
+   Module: Site Header
+------------------------------------------------- #}
+
+{% set pages = header.navigation.all() %}
+
+{#
+   -------------------------------------------------
+#}
+
+
+<header class="m-site_header | fixed z-50 | w-full | z-50 | bg-white">
+   <div class="l-container">
+      <div class="l-row flex | items-center">
+         <a href="{{ siteUrl }}" class="l-item flex-1 py-6 md:py-0">
+            {% set settings = {
+               classes: 'h-7',
+            } %}
+            {% include '_includes/svgs/logo--header' with settings %}
+         </a>
+         <div class="l-item flex-auto text-right">
+            <nav class="hidden md:block">
+               {% for page in pages %}
+               {% set active = false %}
+               {% set children = page.childrenLinks.all() %}
+               
+               {% if page.topLink.one().title == entry.title %}
+                  {% set active = true %}
+               {% endif %}
+               
+               {% for link in children %}
+                  {% if link.title == entry.title %}
+                     {% set active = true %}
+                  {% endif %}
+               {% endfor %}
+               
+               <div class="m-header_dropdown | py-10">
+                  {% if page.topLink.one().type == 'top' %}
+                  <a class="inline-block | ml-6 | text-5 cursor-pointer {% if active %}-active{% endif %}">{{ page.topLink.one().title }}</a>
+                  {% else %}
+                  <a class="inline-block | ml-6 | text-5 {% if active %}-active{% endif %}" href="{{ page.topLink.one().url }}">{{ page.topLink.one().title }}</a>
+                  {% endif %}
+                  <div class="m-header_dropdown_inner_cont | text-left px-3">
+                     <div class="m-header_dropdown_inner |  divide-y-2 divide-white">
+                        {% for link in children %}
+                        <a class="link-{{ loop.index }} block | text-5 text-white font-bold | whitespace-nowrap | px-2 py-4 leading-none" href="{{ link.url }}">{{ link.title }}</a>
+                        {% endfor %}
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+            </nav>
+            <button data-menu class="hamburger hamburger--slider-r md:hidden" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+               
+         </div>
+      </div>
+   </div>
+</header>
+<div class="m-site_header_spacer" id="site-header-spacer"></div>
+
+<menu class="m-site_menu fixed top-0 left-0 z-40 pl-0 | w-full h-screen | bg-red-500 pt-24 md:hidden">
+   {% for page in pages %}
+   
+   <div class="m_dropdown_header | max-w-4xl mx-auto my-4 px-">
+      {% if page.topLink.one().type == 'top' %}
+         <h3 class="font-proxima text-white text-6 font-normal pl-8 mb-3 cursor-pointer">{{ page.topLink.one().title }}</h3>
+      {% else %}
+         <a class="inline-block | font-proxima text-white text-6 font-normal pl-8 mb-3 cursor-pointer" href="{{ page.topLink.one().url }}">{{ page.topLink.one().title }}</a>
+      {% endif %}
+      {% set children = page.childrenLinks.all() %}
+      <div class="m_dropdown_container border-l-8 border-pink-400 pl-8 mb-5">
+         <div class="m_dropdown_inner">
+            {% for link in children %}
+            <a class="link-{{ loop.index }} block | text-4 text-white font-bold | whitespace-nowrap | px-2 {% if not loop.last %}pb-4{% endif %} leading-none" href="{{ link.url }}">{{ link.title }}</a>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+   {% endfor %}
+</menu>

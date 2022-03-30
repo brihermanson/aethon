@@ -1,0 +1,32 @@
+/*! purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/*! purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+/*! purgecss start ignore */
+// 1: Base
+@import '1__base/base';
+@import '1__base/fonts';
+
+// 2: Layout
+@import '2__layout/layout';
+
+// 3: Elements
+@import '3__element/headers';
+@import '3__element/list';
+@import '3__element/link';
+@import '3__element/dropdowns';
+
+// 4: Components
+
+// 5: Modules
+@import '5__modules/header';
+@import '5__modules/menu';
+@import '5__modules/banner';
+@import '5__modules/hamburger/hamburger';
+@import '5__modules/splide/splide.min.css';
+@import '5__modules/modal';
+
+// 6: Vendor
+/*! purgecss end ignore */

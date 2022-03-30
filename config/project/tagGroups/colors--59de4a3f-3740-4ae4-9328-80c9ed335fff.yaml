@@ -1,0 +1,18 @@
+fieldLayouts:
+  fb4c4d19-3ead-473d-aa70-a0266f6f22c3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 868137f7-134f-4541-b963-63df30a18f82 # Hex Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: colors
+name: Colors

@@ -1,0 +1,40 @@
+fieldLayouts:
+  7126d0c6-ef0a-4eb2-b339-9eee8b29f216:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: newsCategories
+name: 'News Categories'
+siteSettings:
+  90e9762b-b063-4ecd-a13d-b89d892e304c: # Aethon Energy
+    hasUrls: true
+    template: _layout/news/_category
+    uriFormat: 'news-categories/{slug}'
+structure:
+  maxLevels: 1
+  uid: a2a794bb-f440-4efc-b3c1-e434f804d38c

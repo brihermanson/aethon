@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+   <head>
+      <meta charset="UTF-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+      {# --- Favicons: favicon.io  --- #}
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+      <link rel="stylesheet" href="https://use.typekit.net/xye3rov.css">
+
+      {# ---  Prevent Transition Flash  --- #}
+      <style id="holderStyle">
+         *, *::before, *::after { transition: none!important; }
+      </style>
+        
+      {# ---  Styles  ---  #}
+      {% do view.registerCssFile('/dist/css/app.css') %}
+   </head>
+
+   <body id="top">
+      <div class="h-screen">
+         {% include '_layout/_partials/site_header' %}
+
+         <main id="main" class="flex-1">
+            {% block content %}
+            {% endblock %}
+         </main>
+
+         {% include '_layout/_partials/site_footer' %}
+      </div>
+
+      {# ---  Prevent Transition Flash  --- #}
+      <script>
+         window.onload  = () => {
+            holderStyle.remove();
+         };
+      </script>
+
+      {# ---  App  ---  #}
+      {% do view.registerJsFile('/dist/js/app.js') %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    </body>
+</html>

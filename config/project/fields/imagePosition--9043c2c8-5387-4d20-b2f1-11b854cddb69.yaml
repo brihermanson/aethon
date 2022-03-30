@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: 47dccfeb-fe85-41ac-b747-a53c584bd9a9 # Modules
+handle: imagePosition
+instructions: ''
+name: 'Image Position'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Right
+        -
+          - value
+          - image-right
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - image-left
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -1,0 +1,17 @@
+{# -------------------------------------------------
+   Component: Basic Header
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% set headline   = 	component.c_header %}
+{% set textPos		=	component.textPosition %}
+{% set width		=	component.component_width %}
+
+{#
+   -------------------------------------------------
+#}
+
+<div class="l-item w-full {% if type == '1/2' %}md:w-{{ type }}{% endif %} order-2 md:order-{{ index }} my-3 md:my-0 | {{ textPos }}">
+	{{ headline }}
+</div>

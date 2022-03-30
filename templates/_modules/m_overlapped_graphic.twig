@@ -1,0 +1,36 @@
+{# -------------------------------------------------
+   Module: Overlapped Graphic
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% import '_macros/icon' as icons %}
+
+{% set components 	=  	block.children.all() %}
+{% set background 	= 	block.backgroundColor %}
+{% set image		= 	block.c_image.one() %}
+{% set id 			=	block.module_id %}
+{% set narrow		= 	block.narrow %}
+{% set align		= 	block.verticalAlignment %}
+
+{#
+   -------------------------------------------------
+#}
+
+<section class="{{ background }} md:mb-24 lg:mb-72" id="{{ id }}">
+	
+	<div class="l-container {% if narrow %}-narrow{% endif %} | py-24">
+		<div class="l-row | grid grid-col-2 | {{ align }}">
+			{% for component in components %}
+				{% set component_handle = component.type %}
+				{% include '_component/' ~ component_handle with { parent: 'neo', type: '1/2', index: loop.index } %}
+			{% endfor %}
+			<div class="l-item w-full order-3">
+				<div class="h-full sm:-mb-24 md:-mb-40 lg:-mb-96">
+					<img src="{{ image.url }}" />
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</section>

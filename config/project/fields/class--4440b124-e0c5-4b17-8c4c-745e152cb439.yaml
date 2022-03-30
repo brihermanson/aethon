@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: c7c37252-7715-4730-af7f-51d0ef0c84a6 # Common
+handle: class
+instructions: ''
+name: Class
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'taggroup:09ad5a91-577c-4028-985b-1b9f498d60c9' # Styles
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Tags

@@ -1,0 +1,36 @@
+{# -------------------------------------------------
+   Component: Basic Paragraph
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% set headline 	= 	tab.plainHeadline %}
+{% set info			= 	tab.c_paragraph %}
+{% set button		=	tab.c_button %}
+
+{#
+   -------------------------------------------------
+#}
+
+<div class="m_dropdown l-item | max-w-4xl mx-auto my-4 ">
+	<div class="w-full flex bg-white border-l-8 border-red-400 py-2 px-10">
+		<div class="flex-auto py-6">
+			<h3 class="font-proxima text-black text-6 font-light ">{{ headline }}</h3>
+		</div>
+		<div class="flex-shrink border-l border-red-400 text-center py-6 pl-8">
+			<img class="e_dropdown_arrow inline-block" src="{{ siteUrl }}dist/images/carrot.svg" />
+		</div>
+	</div>
+	<div class="m_dropdown_container w-full text-black bg-gray-400 py-8 px-10">
+		<div class="m_dropdown_inner flex flex-wrap">
+			<div class="w-full lg:w-3/4">
+				{{ info }}
+			</div>
+			<div class="w-full lg:w-1/4 lg:text-right mt-6 lg:mt-0">
+				{% if button %}
+				<a href="{{ button.url }}" class="inline-block text-3 uppercase font-bold bg-red-500 px-14 py-2 text-white border border-red-500 hover:bg-white hover:text-red-500">{{ button.text }}</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>

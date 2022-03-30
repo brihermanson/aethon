@@ -1,0 +1,66 @@
+dateModified: 1625591577
+email:
+  fromEmail: tyler@switch.is
+  fromName: 'Aethon Energy'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  contact-form-extensions:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  linkit:
+    edition: standard
+    enabled: true
+    licenseKey: MVBE0US86WPNJPIVG4QP6PRM
+    schemaVersion: 1.0.8
+  neo:
+    edition: standard
+    enabled: true
+    licenseKey: OE7ANUFFY93XNLO114H4JJ5M
+    schemaVersion: 2.8.16
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: 4JMZDDFZR9CXQUN1X1PIQ4YB
+    schemaVersion: 3.0.9
+  tag-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  ui-element-fields:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: 'Aethon Energy'
+  retryDuration: null
+  schemaVersion: 3.6.8
+  timeZone: America/Chicago
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

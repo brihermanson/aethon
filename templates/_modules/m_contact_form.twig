@@ -1,0 +1,48 @@
+{# -------------------------------------------------
+   Module: Two Column
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% import '_macros/icon' as icons %}
+
+{% set background 	= 	block.backgroundColor %}
+
+{#
+   -------------------------------------------------
+#}
+
+<section class="{{ background }}">
+	
+	<div class="l-container -narrow | py-24">
+		<form class="l-row | grid grid-col-2 | items-center">
+			{{ csrfInput() }}
+			<input type="hidden" name="action" value="contact-form/send">
+			
+			<div class="l-item w-full md:w-1/2 mb-10 mb-10">
+				<label class="text-5 text-red-500 mb-2 inline-block" for="first-name">First Name</label>
+				<input class="w-full font-proxima px-5 py-2" id="first-name" type="text" name="message[First_Name]">
+			</div>
+			<div class="l-item w-full md:w-1/2 mb-10">
+				<label class="text-5 text-red-500 mb-2 inline-block" for="last-name">Last Name</label>
+				<input class="w-full font-proxima px-5 py-2" id="last-name" type="text" name="message[Last_Name]">
+			</div>
+			<div class="l-item w-full md:w-1/2 mb-10">
+				<label class="text-5 text-red-500 mb-2 inline-block" for="phone">Phone</label>
+				<input class="w-full font-proxima px-5 py-2" id="phone" type="text" name="message[Phone]">
+			</div>
+			<div class="l-item w-full md:w-1/2 mb-10">
+				<label class="text-5 text-red-500 mb-2 inline-block" for="email">Email</label>
+				<input class="w-full font-proxima px-5 py-2" id="email" type="text" name="fromEmail">
+			</div>
+			<div class="l-item w-full mb-10">
+				<label class="text-5 text-red-500 mb-2 inline-block" for="message">Reason for Inquiry</label>
+				<textarea class="w-full font-proxima px-5 py-2" rows="5" id="message" type="text" name="message[body]"></textarea>
+			</div>
+			<div class="l-item w-full text-right">
+				<button type="submit" class="inline-block text-3 uppercase font-bold bg-red-500 px-14 py-2 text-white border border-red-500 hover:bg-white hover:text-red-500">Submit</button>
+			</div>
+		</form>
+	</div>
+	
+</section>

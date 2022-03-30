@@ -1,0 +1,72 @@
+field: b82719e7-413a-4332-9ae1-00cc76bcec50 # Navigation
+fieldLayouts:
+  67ea0656-9407-4dce-ae4a-46e4bd972c49:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d6fd7506-01ef-45ec-adf6-a7c2af6309c7 # Top Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: abd0faca-a0e5-4d9e-a252-77c3ee807c9c # Children Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  abd0faca-a0e5-4d9e-a252-77c3ee807c9c: # Children Links
+    contentColumnType: string
+    fieldGroup: null
+    handle: childrenLinks
+    instructions: ''
+    name: 'Children Links'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  d6fd7506-01ef-45ec-adf6-a7c2af6309c7: # Top Link
+    contentColumnType: string
+    fieldGroup: null
+    handle: topLink
+    instructions: ''
+    name: 'Top Link'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: pageLink
+name: Link
+sortOrder: 1

@@ -1,0 +1,26 @@
+enableVersioning: true
+handle: pages
+name: Pages
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  90e9762b-b063-4ecd-a13d-b89d892e304c: # Aethon Energy
+    enabledByDefault: true
+    hasUrls: true
+    template: _layout/pages
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: 2
+  uid: 8156c917-be28-4674-a399-e9c34e42077f
+type: structure

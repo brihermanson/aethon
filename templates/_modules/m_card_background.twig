@@ -1,0 +1,17 @@
+{# -------------------------------------------------
+   Module: Card Background
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% set stat 		= 	card.stat %}
+{% set headline		=	card.plainHeadline %}
+
+{#
+   -------------------------------------------------
+#}
+
+<div class="l-item w-full sm:w-1/2 lg:w-1/4 | text-center text-white | mb-10 lg:mb-0">
+	<h2 class="font-action | text-16 sm:text-20 md:text-24 lg:text-28 xl:text-32 | mb-4">{{ stat }}</h2>
+	<h3 class="e-header_five">{{ headline }}</h3>
+</div>

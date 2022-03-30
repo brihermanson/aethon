@@ -1,0 +1,60 @@
+{# -------------------------------------------------
+   Layout: Content Builder
+
+   The Content Builder layout captures all blocks in an entry.
+   The SEO block is excluded.
+   Entry blocks are included directly with parent = entry.
+   Neo blocks include the section builder.
+------------------------------------------------- #}
+
+{% extends '_layout/base' %}
+
+{% block content %}
+	
+	{% set parent = entry.parent %}
+	{% set children = parent.children %}
+	
+	{% include '_layout/_partials/sub_nav' with {children: children} %}
+	
+   {# ---  Capture Entry Blocks  --- #}
+   {% for block in entry.getFieldLayout().getFields() %}
+
+	  {# ---  Filter Blocks  --- #}
+	  {% switch block.className() %}
+		 {# ---  SEO Block  --- #}
+		 {% case 'nystudio107\\seomatic\\fields\\SeoSettings' %}
+
+		 {# ---  NEO Blocks  --- #}
+		 {% case 'benf\\neo\\Field' %}
+			{% set neo       = entry[block.handle] %}
+
+			{# ---  Include Sections  --- #}
+			{% for block in neo.level(1).all() %}
+
+			   {% set block_handle = block.type                        %}
+
+			   {% include '_modules/' ~ block_handle with { parent: 'neo' } %}
+			{% endfor %}
+
+
+
+		 {# ---  Standard Blocks  --- #}
+		 {% default %}
+			{# ---  Set Module  --- #}
+			{% set module = entry[block.handle] %}
+
+			{# ---  Set Module Parent  --- #}
+			{% set module_parent = 'entry' %}
+
+			{# --
+			   Module handles are set in "m__module_name" format and
+			   converted to "m-module_name" format to match CSS
+			-- #}
+			{% set block_handle = block.handle %}
+
+			{% include '_modules/' ~ block_handle %}
+	 {% endswitch %}
+
+   {% endfor %}
+   
+{% endblock %}

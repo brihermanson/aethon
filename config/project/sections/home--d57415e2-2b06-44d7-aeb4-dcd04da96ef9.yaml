@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: home
+name: Home
+propagationMethod: all
+siteSettings:
+  90e9762b-b063-4ecd-a13d-b89d892e304c: # Aethon Energy
+    enabledByDefault: true
+    hasUrls: true
+    template: _layout/content_builder
+    uriFormat: __home__
+type: single

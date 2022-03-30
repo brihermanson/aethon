@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: be7c5be8-75d8-4133-9361-6fb2e2a6185b # Team
+handle: position
+instructions: ''
+name: Position
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

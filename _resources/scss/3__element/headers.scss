@@ -1,0 +1,63 @@
+//
+// Headers: 1-6
+//
+
+.e-header_one,
+h1 {
+	@apply text-12 md:text-16 font-proxima font-light;
+	
+	line-height: 1.2em;
+	color: inherit;
+}
+
+.e-header_two,
+h2 {
+	@apply text-12 font-proxima font-normal;
+	
+	line-height: 1em;
+	color: inherit;
+}
+
+.e-header_three,
+h3 {
+	@apply text-10 font-proxima font-normal;
+	
+	line-height: 1.1em;
+	color: inherit;
+}
+
+.e-header_four,
+h4 {
+	@apply text-7 font-proxima font-normal;
+	
+	line-height: 1.1em;
+	color: inherit;
+}
+.e-header_five,
+h5 {
+	@apply text-6 font-proxima font-bold uppercase;
+	
+	line-height: 1.2em;
+	color: inherit;
+}
+.e-header_six,
+h6 {
+	
+}
+
+.e_paragraph,
+p, ul, ol {
+	@apply text-4 font-minion font-normal;
+	
+	color: inherit;
+	margin-bottom: 1rem;
+	
+	a {
+		@apply text-4 font-minion font-normal;
+		text-decoration: underline;
+	}
+}
+
+.-action {
+	@apply font-action;
+}

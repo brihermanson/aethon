@@ -1,0 +1,18 @@
+fieldLayouts:
+  f74b173b-20aa-4535-bcc0-1de57efbf404:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4440b124-e0c5-4b17-8c4c-745e152cb439 # Class
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: styles
+name: Styles

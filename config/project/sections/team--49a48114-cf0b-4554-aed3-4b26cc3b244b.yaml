@@ -1,0 +1,26 @@
+enableVersioning: true
+handle: team
+name: Team
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  90e9762b-b063-4ecd-a13d-b89d892e304c: # Aethon Energy
+    enabledByDefault: true
+    hasUrls: true
+    template: team/_entry
+    uriFormat: 'team/{slug}'
+structure:
+  maxLevels: null
+  uid: a961d076-21a8-4fab-ba9e-b57cd1733b2d
+type: structure

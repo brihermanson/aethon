@@ -1,0 +1,23 @@
+enableVersioning: true
+handle: careers
+name: Careers
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  90e9762b-b063-4ecd-a13d-b89d892e304c: # Aethon Energy
+    enabledByDefault: true
+    hasUrls: true
+    template: _layout/careers
+    uriFormat: careers
+type: single

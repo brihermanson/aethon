@@ -1,0 +1,35 @@
+{# -------------------------------------------------
+   Module: Two Column
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% import '_macros/icon' as icons %}
+
+{% set images	 	=  	block.c_images.all() %}
+{% set background 	= 	block.backgroundColor %}
+{% set id 			=	block.module_id %}
+{% set narrow		= 	block.narrow %}
+{% set padding		= 	block.padding %}
+
+{#
+   -------------------------------------------------
+#}
+
+<section class="{{ background }}" id="{{ id|kebab }}">
+	
+	<div class="l-container {% if narrow %}-narrow{% endif %} | {{ padding }}">
+		<div class="l-row | grid grid-col-2">
+			<div class="l-item w-full">
+				<div id="gallery-slider" class="h-full">
+					{% for image in images %}
+					<div>
+						<img class="w-full h-banner object-cover" src="{{ image.url }}" />
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</section>

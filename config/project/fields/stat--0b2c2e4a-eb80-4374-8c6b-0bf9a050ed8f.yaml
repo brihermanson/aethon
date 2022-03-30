@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 47dccfeb-fe85-41ac-b747-a53c584bd9a9 # Modules
+handle: stat
+instructions: ''
+name: Stat
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

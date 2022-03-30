@@ -1,0 +1,26 @@
+{# -------------------------------------------------
+   Component: Simple Block
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% set headline 	=	component.c_header %}
+{% set paragraph 	= 	component.c_paragraph %}
+{% set button		= 	component.c_button %}
+{% set width		=	component.component_width %}
+
+{#
+   -------------------------------------------------
+#}
+
+<div class="l-item w-full {% if type == '1/2' %}md:w-{{ type }}{% endif %} order-2 md:order-{{ index }} py-16">
+	<div class="mb-10">
+		{{ headline }}
+	</div>
+	{{ paragraph }}
+	{% if button %}
+	<div class="mt-10">
+		<a href="{{ button.url }}" class="inline-block text-3 uppercase font-bold bg-red-500 px-14 py-4 text-white border border-red-500 hover:bg-white hover:text-red-500">{{ button.text }}</a>
+	</div>
+	{% endif %}
+</div>

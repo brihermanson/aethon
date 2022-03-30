@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: 9a4892aa-104a-4b33-a326-4864b7730f6e # News
+handle: relatedArticles
+instructions: ''
+name: 'Related Articles'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '3'
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:3b66037f-a617-46e4-8f74-ba39d97df831' # News Articles
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

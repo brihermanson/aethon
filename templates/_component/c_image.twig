@@ -1,0 +1,37 @@
+{# -------------------------------------------------
+   Component: Basic Image
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% set image 			= 	component.c_image.one() %}
+{% set flush 			=	component.flush %}
+{% set width			=	component.component_width %}
+
+{% set marginY			= 	'' %}
+{% if padding == 'py-6' and flush %}
+	{% set marginY	= 'md:-my-6' %}
+{% elseif padding == 'py-12' and flush %}
+	{% set marginY	= 'md:-my-12' %}
+{% elseif padding == 'py-24' and flush %}
+	{% set marginY	= 'md:-my-24' %}
+{% elseif padding == 'py-3' and flush %}
+	{% set marginY	= 'md:-my-3' %}
+{% endif %}
+
+{% set innerFlushClass 	= '' %}
+{% if index == 2 and flush %}
+	{% set innerFlushClass 	= 'md:-mr-16 md:-ml-5' %}
+{% elseif flush %}
+	{% set innerFlushClass 	= 'md:-mr-5 md:-ml-16' %}
+{% endif %}
+
+{#
+   -------------------------------------------------
+#}
+
+<div class="l-item w-full {% if type == '1/2' %}md:w-{{ type }}{% endif %} order-1 md:order-{{ index }} {% if flush %}self-stretch{% endif %} {{ marginY }}">
+	<div class="h-full {{ innerFlushClass }}">
+		<img class="{% if flush %}md:h-full md:object-cover{% endif %}" src="{{ image.url }}" />
+	</div>
+</div>

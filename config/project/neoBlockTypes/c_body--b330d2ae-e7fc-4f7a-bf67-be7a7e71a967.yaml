@@ -1,0 +1,38 @@
+childBlocks: ''
+field: 0721a0d7-c94f-4d51-8847-28aaaf18b31c # News Page Content
+fieldLayouts:
+  303dd3ec-3e4d-40a4-93a6-004373c4e385:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d6055877-27dd-431d-b5ea-a58c66494c48 # Header
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 47b7e378-7822-4a43-b757-c1e4b1de2996 # ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 2
+handle: c_body
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+name: Body
+sortOrder: 2
+topLevel: true

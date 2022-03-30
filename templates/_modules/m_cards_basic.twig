@@ -1,0 +1,27 @@
+{# -------------------------------------------------
+   Module: Background Cards
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% import '_macros/icon' as icons %}
+
+{% set cards 		=  	block.children.all() %}
+{% set background 	= 	block.backgroundColor %}
+
+{#
+   -------------------------------------------------
+#}
+
+<section class="bg-center bg-cover {{ background }}">
+	
+	<div class="l-container | py-24">
+		<div class="l-row | flex | items-top">
+			{% for card in cards %}
+				{% set card_handle = card.type %}
+				{% include '_modules/' ~ card_handle with { parent: 'neo' } %}
+			{% endfor %}
+		</div>
+	</div>
+	
+</section>

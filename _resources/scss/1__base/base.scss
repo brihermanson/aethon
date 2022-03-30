@@ -1,0 +1,39 @@
+//
+// Base
+//
+
+body { @apply antialiased font-proxima text-base text-black; }
+
+a,
+button,
+input,
+select,
+textarea  {
+   @apply
+      font-proxima transition duration-150 ease-linear
+      appearance-none rounded-none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+   outline: none;
+}
+
+.element-invisible {
+   @apply
+      absolute overflow-hidden
+      h-px w-px;
+   clip: rect(1px,1px,1px,1px);
+}
+
+input::-webkit-input-placeholder {
+   line-height:normal!important;
+}
+
+.disable-scrollbars {
+   scrollbar-width: none; /* Firefox */
+   -ms-overflow-style: none;  /* IE 10+ */
+   
+   &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* Chrome/Safari/Webkit */
+   }
+}

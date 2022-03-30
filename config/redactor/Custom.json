@@ -1,0 +1,117 @@
+{
+	  "buttons": ["format", "bold", "italic", "lists", "link"],
+	  "plugins": ["customstyles"],
+	  "customStyles": {
+		  
+		"Weight": {
+		  "dropdown": {
+			"Light": {
+			  "args": {
+				"tag": "span",
+				"class": "font-light",
+				"type": "toggle"
+			  }
+			},
+			"Normal": {
+			  "args": {
+				"tag": "span",
+				"class": "font-normal",
+				"type": "toggle"
+			  }
+			},
+			"Bold": {
+			  "args": {
+				"tag": "span",
+				"class": "font-bold",
+				"type": "toggle"
+			  }
+			}
+		  }
+		},
+		  
+		"textColor": {
+		  "dropdown": {
+			"Black": {
+			  "args": {
+				"tag": "span",
+				"class": "text-black",
+				"type": "toggle"
+			  }
+			},
+			"Grey - Light": {
+			  "args": {
+				"tag": "span",
+				"class": "text-grey-400",
+				"type": "toggle"
+			  }
+			},
+			"Pink": {
+			  "args": {
+				"tag": "span",
+				"class": "text-pink-400",
+				"type": "toggle"
+			  }
+			},
+			"Red - Dark": {
+			  "args": {
+				"tag": "span",
+				"class": "text-red-500",
+				"type": "toggle"
+			  }
+			},
+			"Red - Medium": {
+			  "args": {
+				"tag": "span",
+				"class": "text-red-400",
+				"type": "toggle"
+			  }
+			},
+			"Red - Light": {
+			  "args": {
+				"tag": "span",
+				"class": "text-red-300",
+				"type": "toggle"
+			  }
+			},
+			"White": {
+			  "args": {
+				"tag": "span",
+				"class": "text-white",
+				"type": "toggle"
+			  }
+			}
+		  }
+		},
+		
+		"align": {
+		  "dropdown": {
+			"alignLeft": {
+			  "api": "module.block.format",
+			  "args": "p"
+			},
+			"alignRight": {
+			  "api": "module.block.format",
+			  "args": {
+				"tag": "p",
+				"class": "align-right"
+			  }
+			},
+			"alignCenter": {
+			  "api": "module.block.format",
+			  "args": {
+				"tag": "p",
+				"class": "align-center"
+			  }
+			},
+			"alignJustify": {
+			  "api": "module.block.format",
+			  "args": {
+				"tag": "p",
+				"class": "align-justify"
+			  }
+			}
+		  }
+		}
+		
+	  }
+	}

@@ -1,0 +1,23 @@
+{# -------------------------------------------------
+   Layout: 404
+------------------------------------------------- #}
+
+{% extends '_layout/base' %}
+
+{% block content %}
+
+<div class="l-layout | my-24 sm:my-28 md:my-32 lg:my-48">
+   <div class="l-container -narrow">
+      <div class="l-row | justify-center">
+         <div class="l-item | w-full">
+            <h2 class="e-heading | mb-8">Sorry...<br>We can't find the page you're looking for.</h2>
+
+            <div class="e-paragraph">
+               <p>Please check your address and try again, otherwise you can <a href="{{ siteUrl }}contact">contact us</a>, or visit our <a href="{{ siteUrl }}">homepage</a>.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+{% endblock %}

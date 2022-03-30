@@ -1,0 +1,20 @@
+{# -------------------------------------------------
+   Module: Image Graphic
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% import '_macros/icon' as icons %}
+
+{% set image 		=  	block.c_image.one() %}
+{% set id			= 	block.module_id %}
+
+{#
+   -------------------------------------------------
+#}
+
+<section class="relative" id="{{ id }}">
+	
+	<img src="{{ image.url }}" class="w-full | object-cover" />
+	
+</section>

@@ -1,0 +1,45 @@
+contentColumnType: string
+fieldGroup: c8f84894-b4d7-455d-8076-1d0b7031ba41 # Builder
+handle: textPosition
+instructions: ''
+name: 'Text Position'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - text-left
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Right
+        -
+          - value
+          - text-right
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Center
+        -
+          - value
+          - text-center
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

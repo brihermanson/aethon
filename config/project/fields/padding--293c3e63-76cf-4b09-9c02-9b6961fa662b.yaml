@@ -1,0 +1,56 @@
+contentColumnType: string
+fieldGroup: 47dccfeb-fe85-41ac-b747-a53c584bd9a9 # Modules
+handle: padding
+instructions: ''
+name: Padding
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Extra Short'
+        -
+          - value
+          - py-3
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Short
+        -
+          - value
+          - py-6
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Medium
+        -
+          - value
+          - py-12
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Tall
+        -
+          - value
+          - py-24
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

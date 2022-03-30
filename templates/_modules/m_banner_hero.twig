@@ -1,0 +1,49 @@
+{# -------------------------------------------------
+   Module: Hero Banner
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% import '_macros/icon' as icons %}
+
+{% if parent == 'neo' %}
+	{% set images 		=  	block.c_images %}
+	{% set headline 	= 	block.c_header %}
+	{% set id 			= 	block.module_id %}
+{% else %}
+	{% set images 		=   image %}
+	{% set headline 	= 	header %}
+	{% set id 			= 	id %}
+{% endif %}
+
+{#
+   -------------------------------------------------
+#}
+
+<section class="relative" id="{{ id }}">
+	
+	{% if images|length > 1 %}
+	<div class="absolute inset-0 z-10 h-full w-full">
+		<div id="banner-slider">
+			{% for image in images %}
+			<div class="inner-slide">
+				<img class="h-banner  w-full object-cover" src="{{ image.url }}">
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	{% else %}
+	{% if images|length > 0 %}
+		<img src="{{ images.one().url }}" class="absolute inset-0 z-10 h-full w-full | object-cover" />
+	{% endif %}
+	{% endif %}
+	
+	<div class="l-container | relative z-20">
+		<div class="l-row h-banner | flex | items-center">
+			<div class="l-item w-full xl:w-2/3 | text-white">
+				{{ headline }}
+			</div>
+		</div>
+	</div>
+	
+</section>

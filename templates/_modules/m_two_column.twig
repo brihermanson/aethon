@@ -1,0 +1,31 @@
+{# -------------------------------------------------
+   Module: Two Column
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% import '_macros/icon' as icons %}
+
+{% set components 	=  	block.children.all() %}
+{% set background 	= 	block.backgroundColor %}
+{% set id 			=	block.module_id %}
+{% set narrow		= 	block.narrow %}
+{% set align		= 	block.verticalAlignment %}
+{% set padding		= 	block.padding %}
+
+{#
+   -------------------------------------------------
+#}
+
+<section class="{{ background }} {% if background == 'bg-red-400' or background == 'bg-red-500' or background == 'bg-red-300'%}text-white{% endif%}" id="{{ id|kebab }}">
+	
+	<div class="l-container {% if narrow %}-narrow{% endif %} | {{ padding }}">
+		<div class="l-row | grid grid-col-2 | {{ align }}">
+			{% for component in components %}
+				{% set component_handle = component.type %}
+				{% include '_component/' ~ component_handle with { parent: 'neo', type: '1/2', index: loop.index, padding: padding } %}
+			{% endfor %}
+		</div>
+	</div>
+	
+</section>

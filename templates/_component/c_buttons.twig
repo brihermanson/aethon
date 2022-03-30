@@ -1,0 +1,21 @@
+{# -------------------------------------------------
+   Component: Basic Header
+------------------------------------------------- #}
+
+{# Macros #}
+
+{% set buttons   	= 	component.c_buttons %}
+{% set textPos		=	component.textPosition %}
+{% set width		=	component.component_width %}
+
+{#
+   -------------------------------------------------
+#}
+
+<div class="l-item w-full {% if type == '1/2' %}md:w-{{ type }}{% endif %} order-2 md:order-{{ index }} my-3 md:my-0 | {{ textPos }}">
+	{% for button in buttons %}
+		<div class="{% if not loop.last %}mb-5{% endif %}">
+			<a class="inline-block e-button" href="{{ button.button.url }}">{{ button.button.text }}</a>
+		</div>
+	{% endfor %}
+</div>

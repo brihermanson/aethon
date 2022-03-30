@@ -1,0 +1,56 @@
+{# -------------------------------------------------
+   Layout: Content Builder
+
+   The Content Builder layout captures all blocks in an entry.
+   The SEO block is excluded.
+   Entry blocks are included directly with parent = entry.
+   Neo blocks include the section builder.
+------------------------------------------------- #}
+
+{% extends '_layout/base' %}
+
+{% block content %}
+
+   {% set categories = craft.categories.group("newsCategories") %}
+
+   <section>
+	  <div class="l-container | relative z-20">
+		 <div class="l-row py-12 | flex | items-center">
+			{% for cat in categories %}
+			<div class="l-item flex-shrink">
+			   <a class="e-link -newsNav {% if cat.title == category.title %}-active{% endif %}" href="{{ cat.url }}" href="{{ cat.url }}">{{ cat.title }}</a>
+			</div>
+			{% endfor %}
+		 </div>
+	  </div>
+   </section>
+   
+   <section class="bg-center bg-cover">
+	  
+	  {% set cards = craft.entries.section("news").relatedTo(category).all() %}
+	  <div class="l-container | pb-24">
+		 <div class="l-row | flex | items-top">
+			{% for card in cards %}
+			
+			   {% set headline    = card.title %}
+			   {% set desc        = card.description %}
+			   {% set thumb       = card.thumbnail.one() %}
+			   {% set url         = card.url %}
+			   
+			   <div class="l-item w-full sm:w-1/2 lg:w-1/3 | | mb-10 lg:mb-0">
+				  <div class="pb-1/2 relative text-white">
+					 <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb.url }}" />
+				  </div>
+				  <div class="bg-gray-400 px-8 py-8">
+					 <h4 class="text-5 font-proxima font-bold text-red-500">{{ headline }}</h4>
+					 <p class="mb-4">{{ desc }}</p>
+					 <a class="e-button | my-2" href="{{ url }}">Read More</a>
+				  </div>
+			   </div>
+			{% endfor %}
+		 </div>
+	  </div>
+	  
+   </section>
+   
+{% endblock %}

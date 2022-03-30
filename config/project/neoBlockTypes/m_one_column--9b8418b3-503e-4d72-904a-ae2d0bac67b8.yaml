@@ -1,0 +1,66 @@
+childBlocks:
+  - c_simple_block
+  - c_header
+  - c_paragraph
+  - c_button
+  - c_image
+field: 36c0a2a3-459b-4683-9aa6-b0a9d4f70494 # Page Content
+fieldLayouts:
+  a13fa582-3769-481a-88e5-315e7b949b9f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 47b7e378-7822-4a43-b757-c1e4b1de2996 # ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 69849cd6-effc-4de9-b732-74455851ac89 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: a1517bcc-6e03-4eec-8a80-a1bb1d487231 # Vertical Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 293c3e63-76cf-4b09-9c02-9b6961fa662b # Padding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 5d03a6e5-4e4b-425c-afef-b5516728fa11 # Narrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Settings
+        sortOrder: 1
+handle: m_one_column
+maxBlocks: 0
+maxChildBlocks: 1
+maxSiblingBlocks: 0
+name: 'One Column'
+sortOrder: 16
+topLevel: true

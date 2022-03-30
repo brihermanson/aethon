@@ -1,0 +1,30 @@
+{
+	  "name": "aethon-energy",
+	  "version": "1.0.0",
+	  "description": "Aethon Energy Website",
+	  "author": "Switch Creative",
+	  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/madebyswitch/aethon-energy.git"
+	  },
+	  "scripts": {
+		"development": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"watch": "npm run development -- --watch",
+		"production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"prod": "npm run production"
+	  },
+	  "dependencies": {
+		"alpinejs": "^2.8.2",
+		"autoprefixer": "^10.2.5",
+		"laravel-mix": "^5.0.9",
+		"laravel-mix-purgecss": "^5.0.0",
+		"lazysizes": "^5.3.2",
+		"postcss": "^8.2.13",
+		"tailwindcss": "^2.1.2"
+	  },
+	  "devDependencies": {
+		"sass": "^1.32.11",
+		"sass-loader": "^8.0.2",
+		"vue-template-compiler": "^2.6.12"
+	  }
+	}

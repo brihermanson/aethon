@@ -1,0 +1,69 @@
+/*
+
+	---- Aethon Fonts ----
+	
+	Proxima Nova
+	- Bold: 700
+	- SemiBold: 600
+	- Regular: 400
+	
+	Action
+	- Regular: 400
+
+*/
+
+
+// ---- Proxima Nova
+
+// Bold
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/proximanova-bold-webfont.woff2') format('woff2'),
+		 url('../fonts/proximanova-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+
+}
+
+// SemiBold
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/proximanova-sbold-webfont.woff2') format('woff2'),
+		 url('../fonts/proximanova-sbold-webfont.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+
+}
+
+// Regular
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/proximanova-reg-webfont.woff2') format('woff2'),
+		 url('../fonts/proximanova-reg-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+// Light
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/proximanova-light-webfont.woff2') format('woff2'),
+		 url('../fonts/proximanova-light-webfont.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+
+}
+
+
+// ---- Action Cnd
+
+// Regular
+@font-face {
+	font-family: 'action';
+	src: url('../fonts/action-condensed-bold--grade-2.woff2') format('woff2'),
+		 url('../fonts/action-condensed-bold--grade-2.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+
+}

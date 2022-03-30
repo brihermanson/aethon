@@ -1,0 +1,25 @@
+childBlocks: ''
+field: 36c0a2a3-459b-4683-9aa6-b0a9d4f70494 # Page Content
+fieldLayouts:
+  f924420c-a8f8-4dca-86aa-d06998ee2e4c:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 69849cd6-effc-4de9-b732-74455851ac89 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 1
+handle: m_contact_form
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+name: 'Contact Form'
+sortOrder: 28
+topLevel: true

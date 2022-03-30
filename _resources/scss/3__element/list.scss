@@ -1,0 +1,20 @@
+ul {
+	color: inherit;
+	margin-left: 1rem;
+	color: inherit;
+	
+	li {
+		&:before {
+			content: "•";
+			display: inline-block;
+			font-size: 15px;
+			vertical-align: middle;
+			line-break: 1em;
+			margin-right: 10px;
+			margin-bottom: 5px;
+			margin-left: -1rem;
+			color: inherit;
+		}
+	}
+
+}
