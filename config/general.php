@@ -10,7 +10,7 @@
 
 use craft\helpers\App;
 
-$isDev = App::env('ENVIRONMENT') === 'dev';
+$isDev = App::env('ENVIRONMENT') === 'staging';
 $isProd = App::env('ENVIRONMENT') === 'production';
 
 return [
@@ -30,8 +30,11 @@ return [
     'devMode' => $isDev,
 
     // Whether administrative changes should be allowed
-    'allowAdminChanges' => true,
+    'allowAdminChanges' => $isDev,
 
+    'allowUpdates' => $isDev,
+
+    
     // Whether crawlers should be allowed to index pages and following links
     'disallowRobots' => !$isProd,
 ];
