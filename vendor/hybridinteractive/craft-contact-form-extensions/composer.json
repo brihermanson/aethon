@@ -1,0 +1,49 @@
+{
+    "name": "hybridinteractive/craft-contact-form-extensions",
+    "description": "Adds extensions to the Craft CMS contact form plugin.",
+    "type": "craft-plugin",
+    "version": "1.2.4",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft contact form extensions"
+    ],
+    "support": {
+        "docs": "https://github.com/hybridinteractive/craft-contact-form-extensions/blob/master/README.md",
+        "issues": "https://github.com/hybridinteractive/craft-contact-form-extensions/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hybrid Interactive",
+            "homepage": "https://hybridinteractive.io"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.1",
+        "craftcms/contact-form": "^2.1",
+        "albertcht/invisible-recaptcha": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+          "rias\\contactformextensions\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Contact Form Extensions",
+        "handle": "contact-form-extensions",
+        "schemaVersion": "1.0.1",
+        "hasCpSettings": true,
+        "hasCpSection": true,
+        "changelogUrl": "https://github.com/hybridinteractive/craft-contact-form-extensions/blob/master/CHANGELOG.md",
+        "components": {
+            "contactFormExtensionsService": "rias\\contactformextensions\\services\\ContactFormExtensionsService"
+        },
+        "class": "rias\\contactformextensions\\ContactFormExtensions"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}

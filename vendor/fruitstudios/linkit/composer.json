@@ -1,0 +1,56 @@
+{
+	"name": "fruitstudios/linkit",
+	"description": "One link field to rule them all.",
+	"type": "craft-plugin",
+	"version": "1.1.12.1",
+	"keywords": [
+		"craft",
+		"cms",
+		"craftcms",
+		"craft-plugin",
+		"link it",
+		"linkit",
+		"fruit studios"
+	],
+	"support": {
+		"email": "hi@fruitstudios.co.uk",
+		"issues":
+			"https://github.com/fruitstudios/craft-linkit/issues?state=open",
+		"source": "https://github.com/fruitstudios/craft-linkit",
+		"docs": "https://github.com/fruitstudios/craft-linkit"
+	},
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Fruit Studios",
+			"homepage": "https://fruitstudios.co.uk"
+		}
+	],
+	"require": {
+		"craftcms/cms": "^3.1.8"
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"fruitstudios\\linkit\\": "src/"
+		}
+	},
+	"extra": {
+		"name": "Linkit",
+		"handle": "linkit",
+		"hasCpSettings": false,
+        "hasCpSection": false,
+		"changelogUrl": "https://raw.githubusercontent.com/fruitstudios/craft-linkit/master/CHANGELOG.md",
+		"class": "fruitstudios\\linkit\\Linkit",
+        "components": {
+            "services": "fruitstudios\\linkit\\services\\LinkitService"
+        }
+	}
+}
+
+
