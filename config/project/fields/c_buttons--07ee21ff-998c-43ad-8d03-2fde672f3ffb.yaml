@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 90f82f48-2e60-488d-96f9-2ca920b7d6f4 # Components
 handle: c_buttons
@@ -8,6 +9,7 @@ settings:
   contentTable: '{{%matrixcontent_c_buttons}}'
   maxBlocks: '3'
   minBlocks: ''
+  propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null
 translationMethod: site

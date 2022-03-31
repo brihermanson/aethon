@@ -47,6 +47,6 @@ settings:
   subfolder: images
 sortOrder: 0
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

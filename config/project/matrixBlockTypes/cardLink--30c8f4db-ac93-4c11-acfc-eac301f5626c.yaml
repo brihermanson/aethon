@@ -17,6 +17,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   04709e9a-9ddc-47fa-8c46-acc71bbdcc36: # Link
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: cardLink

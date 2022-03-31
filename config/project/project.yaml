@@ -1,4 +1,4 @@
-dateModified: 1648681880
+dateModified: 1648686921
 email:
   fromEmail: tyler@switch.is
   fromName: 'Aethon Energy'
@@ -9,6 +9,7 @@ meta:
     0cc347c2-5aaa-4dbf-be01-15ca4e30e362: Home # Home
     0d9c3bd5-e4e5-497b-9ace-32b66f7905bd: Images # Images
     0e52f206-7523-4616-b3be-9079fa43b5e5: 'Cards - Basic' # Cards - Basic
+    1edb7c46-2226-4331-8209-66f4a0a6a9cc: 'Public Schema' # Public Schema
     2b60e1de-adbb-4bdc-ba9a-1c960b2bb320: Links # Links
     2c486cf0-b288-4cc8-ad22-d51efbefad20: 'Full Name' # Full Name
     02efb109-ff71-43b2-802d-fbbf4a4e3fc2: 'Overlapped Graphic' # Overlapped Graphic

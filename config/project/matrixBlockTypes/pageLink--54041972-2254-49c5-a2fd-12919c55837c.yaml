@@ -26,6 +26,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   abd0faca-a0e5-4d9e-a252-77c3ee807c9c: # Children Links
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: childrenLinks
@@ -47,6 +48,7 @@ fields:
     translationMethod: site
     type: craft\fields\Entries
   d6fd7506-01ef-45ec-adf6-a7c2af6309c7: # Top Link
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: topLink

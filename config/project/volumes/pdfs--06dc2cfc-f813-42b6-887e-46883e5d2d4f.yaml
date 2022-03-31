@@ -47,6 +47,6 @@ settings:
   subfolder: pdfs
 sortOrder: 1
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL
