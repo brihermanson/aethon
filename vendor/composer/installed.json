@@ -4279,6 +4279,58 @@
             "install-path": "../spicyweb/craft-neo"
         },
         {
+            "name": "stenvdb/craft-download-assets",
+            "version": "1.0.2",
+            "version_normalized": "1.0.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stenvdb/craft-download-assets/zipball/e5adac4538158e415d1f8211ae6515ba87e226b6",
+                "reference": "e5adac4538158e415d1f8211ae6515ba87e226b6",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "time": "2021-11-09T15:12:47+00:00",
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Download Assets",
+                "handle": "download-assets",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "documentationUrl": "https://github.com/stenvdb/craft-download-assets/blob/master/README.md",
+                "class": "stenvdb\\downloadassets\\DownloadAssets"
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "stenvdb\\downloadassets\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sten Van den Bergh",
+                    "homepage": "http://www.stenvdb.be/"
+                }
+            ],
+            "description": "Adds a download link next to assets",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "download assets"
+            ],
+            "support": {
+                "docs": "https://github.com/stenvdb/craft-download-assets/blob/master/README.md",
+                "issues": "https://github.com/stenvdb/craft-download-assets/issues"
+            },
+            "install-path": "../stenvdb/craft-download-assets"
+        },
+        {
             "name": "sunra/php-simple-html-dom-parser",
             "version": "v1.5.2",
             "version_normalized": "1.5.2.0",

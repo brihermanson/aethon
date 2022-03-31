@@ -229,4 +229,22 @@ return array (
     'developerEmail' => 'hello@servd.host',
     'documentationUrl' => 'https://github.com/servdhost/craft-asset-storage',
   ),
+  'stenvdb/craft-download-assets' => 
+  array (
+    'class' => 'stenvdb\\downloadassets\\DownloadAssets',
+    'basePath' => $vendorDir . '/stenvdb/craft-download-assets/src',
+    'handle' => 'download-assets',
+    'aliases' => 
+    array (
+      '@stenvdb/downloadassets' => $vendorDir . '/stenvdb/craft-download-assets/src',
+    ),
+    'name' => 'Download Assets',
+    'version' => '1.0.2',
+    'description' => 'Adds a download link next to assets',
+    'developer' => 'Sten Van den Bergh',
+    'developerUrl' => 'http://www.stenvdb.be/',
+    'documentationUrl' => 'https://github.com/stenvdb/craft-download-assets/blob/master/README.md',
+    'hasCpSettings' => false,
+    'hasCpSection' => false,
+  ),
 );

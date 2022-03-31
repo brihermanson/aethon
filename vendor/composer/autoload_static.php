@@ -32,8 +32,8 @@ class ComposerStaticInit806afcca7b0306662c3cdbd4a7b1882a
         '65380ab4d81167209b0a4fac46641984' => __DIR__ . '/..' . '/voku/arrayy/src/Create.php',
         'c88a6f0dbb89a32bf4e283d3a7d626ab' => __DIR__ . '/..' . '/voku/stringy/src/Create.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
-        'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
         '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
+        'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -66,6 +66,7 @@ class ComposerStaticInit806afcca7b0306662c3cdbd4a7b1882a
         ),
         's' => 
         array (
+            'stenvdb\\downloadassets\\' => 23,
             'servd\\AssetStorage\\' => 19,
         ),
         'r' => 
@@ -318,6 +319,10 @@ class ComposerStaticInit806afcca7b0306662c3cdbd4a7b1882a
         'verbb\\base\\' => 
         array (
             0 => __DIR__ . '/..' . '/verbb/base/src',
+        ),
+        'stenvdb\\downloadassets\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stenvdb/craft-download-assets/src',
         ),
         'servd\\AssetStorage\\' => 
         array (

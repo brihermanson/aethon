@@ -1,4 +1,4 @@
-dateModified: 1648686921
+dateModified: 1648692226
 email:
   fromEmail: tyler@switch.is
   fromName: 'Aethon Energy'
@@ -124,6 +124,10 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   contact-form-extensions:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  download-assets:
     edition: standard
     enabled: true
     schemaVersion: 1.0.1

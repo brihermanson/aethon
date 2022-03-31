@@ -27,6 +27,7 @@ return array(
     'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku', $vendorDir . '/voku/portable-utf8/src/voku', $vendorDir . '/voku/stop-words/src/voku'),
     'verbb\\fieldmanager\\' => array($vendorDir . '/verbb/field-manager/src'),
     'verbb\\base\\' => array($vendorDir . '/verbb/base/src'),
+    'stenvdb\\downloadassets\\' => array($vendorDir . '/stenvdb/craft-download-assets/src'),
     'servd\\AssetStorage\\' => array($vendorDir . '/servd/craft-asset-storage/src'),
     'rias\\contactformextensions\\' => array($vendorDir . '/hybridinteractive/craft-contact-form-extensions/src'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),

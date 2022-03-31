@@ -31,6 +31,6 @@ return array(
     '65380ab4d81167209b0a4fac46641984' => $vendorDir . '/voku/arrayy/src/Create.php',
     'c88a6f0dbb89a32bf4e283d3a7d626ab' => $vendorDir . '/voku/stringy/src/Create.php',
     'b067bc7112e384b61c701452d53a14a8' => $vendorDir . '/mtdowling/jmespath.php/src/JmesPath.php',
-    'ef65a1626449d89d0811cf9befce46f0' => $vendorDir . '/illuminate/events/functions.php',
     '8a9dc1de0ca7e01f3e08231539562f61' => $vendorDir . '/aws/aws-sdk-php/src/functions.php',
+    'ef65a1626449d89d0811cf9befce46f0' => $vendorDir . '/illuminate/events/functions.php',
 );

@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '0d272edaed93f6041684df125477302365da5206',
+        'reference' => 'b7a3e02102a2d880b0f1513692de90893b42d43a',
         'name' => '__root__',
         'dev' => false,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '0d272edaed93f6041684df125477302365da5206',
+            'reference' => 'b7a3e02102a2d880b0f1513692de90893b42d43a',
             'dev_requirement' => false,
         ),
         'albertcht/invisible-recaptcha' => array(
@@ -788,6 +788,15 @@
             'install_path' => __DIR__ . '/../spicyweb/craft-neo',
             'aliases' => array(),
             'reference' => 'dd5962f0e24a12fd16d7dccf0cb786e14bcc1bc4',
+            'dev_requirement' => false,
+        ),
+        'stenvdb/craft-download-assets' => array(
+            'pretty_version' => '1.0.2',
+            'version' => '1.0.2.0',
+            'type' => 'craft-plugin',
+            'install_path' => __DIR__ . '/../stenvdb/craft-download-assets',
+            'aliases' => array(),
+            'reference' => 'e5adac4538158e415d1f8211ae6515ba87e226b6',
             'dev_requirement' => false,
         ),
         'sunra/php-simple-html-dom-parser' => array(
