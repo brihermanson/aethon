@@ -23,17 +23,17 @@
                <address class="text-white not-italic">{{ general.address|nl2br }}</address>
                <div class="mt-8 fill-white">
                   {% if general.linkedin|length %}
-                  <a class="inline-block" src={{general.linkedin}}>
+                  <a class="inline-block" href={{general.linkedin}}>
                      {{ icons.icon('linkedin', "h-8 | text-white fill-white") }}
                   </a>
                   {% endif %}
                   {% if general.facebook|length %}
-                  <a class="inline-block | ml-2" src={{general.facebook}}>
+                  <a class="inline-block | ml-2" href={{general.facebook}}>
                      {{ icons.icon('facebook', "h-8 | text-white fill-white") }}
                   </a>
                   {% endif %}
                   {% if general.twitter|length %}
-                  <a class="inline-block | ml-2" src={{general.twitter}}>
+                  <a class="inline-block | ml-2" href={{general.twitter}}>
                      {{ icons.icon('twitter', "h-8 | text-white fill-white") }}
                   </a>
                   {% endif %}
