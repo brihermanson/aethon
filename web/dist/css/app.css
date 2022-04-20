@@ -31585,6 +31585,22 @@ ul li:before {
   color: inherit;
 }
 
+ul li.whr-item:before {
+  content: "" !important;
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: middle;
+  line-break: 1em;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-left: -1rem;
+  color: inherit;
+}
+
+.whr-title a {
+  font-weight: bolder;
+}
+
 .e-link {
   font-family: Proxima Nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   position: relative;
