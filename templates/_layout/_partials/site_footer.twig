@@ -22,12 +22,21 @@
                <a class="block text-proxima text-white font-bold uppercase | mb-8">Contact</a>
                <address class="text-white not-italic">{{ general.address|nl2br }}</address>
                <div class="mt-8 fill-white">
-                  <a class="inline-block">
+                  {% if general.linkedin|length %}
+                  <a class="inline-block" src={{general.linkedin}}>
                      {{ icons.icon('linkedin', "h-8 | text-white fill-white") }}
                   </a>
-                  <a class="inline-block | ml-2">
+                  {% endif %}
+                  {% if general.facebook|length %}
+                  <a class="inline-block | ml-2" src={{general.facebook}}>
                      {{ icons.icon('facebook', "h-8 | text-white fill-white") }}
                   </a>
+                  {% endif %}
+                  {% if general.twitter|length %}
+                  <a class="inline-block | ml-2" src={{general.facebook}}>
+                     {{ icons.icon('twitter', "h-8 | text-white fill-white") }}
+                  </a>
+                  {% endif %}
                </div>
             </div>
          </div>
