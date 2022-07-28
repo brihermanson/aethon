@@ -5,8 +5,8 @@
 {# Macros #}
 
 {% set image 		= 	card.c_image.one() %}
-{% set parent		=	card.menuParent %}
-{% set entries 		= 	card.menuParent.level(2) %}
+{% set parent		=	card.menuParent.one() %}
+{% set entries 		= 	parent.level(2) %}
 
 {#
    -------------------------------------------------
