@@ -1,4 +1,4 @@
-{# -------------------------------------------------
+ {# -------------------------------------------------
    Module: Card Menu Parent
 ------------------------------------------------- #}
 
@@ -6,7 +6,7 @@
 
 {% set image 		= 	card.c_image.one() %}
 {% set parent		=	card.menuParent.one() %}
-{% set entries 		= 	parent.level(2) %}
+{% set entries 		= 	parent.children.all() %}
 
 {#
    -------------------------------------------------
@@ -19,6 +19,12 @@
 	</div>
 	<div class="bg-white px-8 py-8">
 		{% for entry in entries %}
+		<div>
+			<a class="e-link | inline-block text-5 text-red-400 my-2" href="{{ entry.url }}">{{ entry.title }}</a>
+		</div>
+		{% endfor %}
+		
+				{% for entry in entries %}
 		<div>
 			<a class="e-link | inline-block text-5 text-red-400 my-2" href="{{ entry.url }}">{{ entry.title }}</a>
 		</div>
