@@ -23,13 +23,20 @@
                {% for page in pages %}
                {% set active = false %}
                {% set children = page.childrenLinks.all() %}
-               
+               {% set kids = 	page.topLink.children.all() %}
+
                {% if page.topLink.one().title == entry.title %}
                   {% set active = true %}
                {% endif %}
                
                {% for link in children %}
                   {% if link.title == entry.title %}
+                     {% set active = true %}
+                  {% endif %}
+               {% endfor %}
+               
+               {% for kid in kids %}
+                  {% if kid.title == entry.title %}
                      {% set active = true %}
                   {% endif %}
                {% endfor %}
@@ -42,6 +49,9 @@
                   {% endif %}
                   <div class="m-header_dropdown_inner_cont | text-left px-3">
                      <div class="m-header_dropdown_inner |  divide-y-2 divide-white">
+                        {% for kid in kids %}
+                        <a class="link-{{ loop.index }} block | text-5 text-white font-bold | whitespace-nowrap | px-2 py-4 leading-none" href="{{ kid.url }}">{{ kid.title }}</a>
+                        {% endfor %}
                         {% for link in children %}
                         <a class="link-{{ loop.index }} block | text-5 text-white font-bold | whitespace-nowrap | px-2 py-4 leading-none" href="{{ link.url }}">{{ link.title }}</a>
                         {% endfor %}
