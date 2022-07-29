@@ -23,7 +23,7 @@
                {% for page in pages %}
                {% set active = false %}
                {% set children = page.childrenLinks.all() %}
-               {% set kids = 	page.topLink.children.all() %}
+               {% set kids = 	page.topLink.one().children.all() %}
 
                {% if page.topLink.one().title == entry.title %}
                   {% set active = true %}
